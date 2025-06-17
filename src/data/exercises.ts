@@ -15,7 +15,7 @@ function sumar(a, b) {
 module.exports = sumar;`,
     tests: `const sumar = require('./sumar');
 
-describe('Función sumar', () => {
+describe('Función sumar', function() {
   test('debe sumar dos números positivos correctamente', function() {
     expect(sumar(2, 3)).toBe(5);
   });
@@ -60,7 +60,7 @@ function esNumero(valor) {
 module.exports = esNumero;`,
     tests: `const esNumero = require('./es-numero');
 
-describe('Verificar si es número', () => {
+describe('Verificar si es número', function() {
   test('debe retornar true para números válidos', function() {
     expect(esNumero(5)).toBe(true);
     expect(esNumero(0)).toBe(true);
@@ -110,7 +110,7 @@ function esMayorDeEdad(edad) {
 module.exports = esMayorDeEdad;`,
     tests: `const esMayorDeEdad = require('./mayor-edad');
 
-describe('Verificar mayoría de edad', () => {
+describe('Verificar mayoría de edad', function() {
   test('debe usar toBe para casos exactos', function() {
     expect(esMayorDeEdad(18)).toBe(true);
     expect(esMayorDeEdad(17)).toBe(false);
@@ -158,7 +158,7 @@ function calcularDescuento(precio, porcentaje) {
 module.exports = calcularDescuento;`,
     tests: `const calcularDescuento = require('./descuento');
 
-describe('Calcular descuento', () => {
+describe('Calcular descuento', function() {
   test('debe calcular descuentos exactos', function() {
     expect(calcularDescuento(100, 10)).toBe(90);
     expect(calcularDescuento(50, 20)).toBe(40);
@@ -212,7 +212,7 @@ function filtrarPares(numeros) {
 module.exports = filtrarPares;`,
     tests: `const filtrarPares = require('./filtrar-pares');
 
-describe('Filtrar números pares', () => {
+describe('Filtrar números pares', function() {
   test('debe filtrar números pares correctamente', function() {
     expect(filtrarPares([1, 2, 3, 4, 5, 6])).toEqual([2, 4, 6]);
   });
@@ -285,7 +285,7 @@ function validarContrasena(password) {
 module.exports = validarContrasena;`,
     tests: `const validarContrasena = require('./validar-password');
 
-describe('Validar contraseña', () => {
+describe('Validar contraseña', function() {
   test('debe validar contraseñas correctas', function() {
     expect(validarContrasena('MiPassword123')).toBe(true);
     expect(validarContrasena('Segura1')).toBeFalsy(); // muy corta
@@ -365,7 +365,7 @@ function crearUsuario(nombre, edad, email) {
 module.exports = crearUsuario;`,
     tests: `const crearUsuario = require('./crear-usuario');
 
-describe('Crear usuario', () => {
+describe('Crear usuario', function() {
   test('debe crear objeto usuario correctamente', function() {
     var usuario = crearUsuario('Ana', 25, 'ana@email.com');
     
@@ -449,7 +449,7 @@ function calcularEstadisticas(numeros) {
 module.exports = calcularEstadisticas;`,
     tests: `const calcularEstadisticas = require('./estadisticas');
 
-describe('Calcular estadísticas', () => {
+describe('Calcular estadísticas', function() {
   test('debe calcular estadísticas correctamente', function() {
     var stats = calcularEstadisticas([1, 2, 3, 4, 5]);
     
@@ -550,7 +550,7 @@ function esEmailValido(email) {
 module.exports = esEmailValido;`,
     tests: `const esEmailValido = require('./email');
 
-describe('Validador de Email', () => {
+describe('Validador de Email', function() {
   test('debe validar emails correctos', function() {
     expect(esEmailValido('test@ejemplo.com')).toBe(true);
     expect(esEmailValido('usuario.nombre@dominio.org')).toBeTruthy();
